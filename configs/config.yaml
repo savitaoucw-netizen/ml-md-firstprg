@@ -14,3 +14,8 @@ cross_validation:
 artifacts:
   model_path: "best_model.joblib"
   metadata_path: "best_model_metadata.joblib"
+  - name: Check Required Files
+  run: |
+    test -f requirements.txt
+    test -f main.py
+    test -f configs/config.yaml
